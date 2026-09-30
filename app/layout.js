@@ -40,7 +40,7 @@ const nephilm = localFont({
 })
 
 export const metadata = {
-  metadataBase: new URL('https://arvindsylva.co.in'),
+  metadataBase: new URL('https://arvindsylvakodathi.com'),
   title: 'Arvind Sylva | Premium 3 & 4 BHK Apartments Bengaluru',
   description: 'Arvind Sylva is a premium residential project by Arvind SmartSpaces located opposite Wipro Office at Kodathi Gate on Sarjapur Road, Bangalore.',
   alternates: {
@@ -49,7 +49,7 @@ export const metadata = {
   openGraph: {
     title: 'Arvind Sylva | Premium 3 & 4 BHK Apartments Bengaluru',
     description: 'Arvind Sylva is a premium residential project by Arvind SmartSpaces located opposite Wipro Office at Kodathi Gate on Sarjapur Road, Bangalore.',
-    url: 'https://arvindsylva.co.in',
+    url: 'https://arvindsylvakodathi.com',
     siteName: 'Arvind Sylva',
     type: 'website',
   },

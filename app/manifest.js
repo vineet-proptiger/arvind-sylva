@@ -2,7 +2,7 @@ export default function manifest() {
   return {
     name: 'Arvind Sylva',
     short_name: 'Arvind Sylva',
-    description: 'Ultra-modern Neo-classical Residences in Noida',
+    description: 'Premium 3 & 4 BHK Luxury Residences at Kodathi Gate, Sarjapur, Bengaluru',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

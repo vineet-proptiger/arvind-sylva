@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://arvindsylva.co.in/sitemap.xml',
+    sitemap: 'https://arvindsylvakodathi.com/sitemap.xml',
   }
 }
