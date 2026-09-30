@@ -49,16 +49,17 @@ const Hero = ({ setIsOpen }) => {
   return (
     <section
       id="home"
-      className="hero-section relative bg-gradient-to-br from-[#2f080c] via-[#160406] to-[#090203] text-white overflow-hidden"
+      className="hero-section relative text-white overflow-hidden"
       style={{
+        background: 'linear-gradient(135deg, #780008 0%, #910612 45%, #610006 100%)',
         fontFamily: 'var(--font-poppins), Poppins, sans-serif',
       }}
     >
       <div className="w-full pt-[82px] pb-8 sm:pt-[88px] sm:pb-10 lg:pt-[98px] lg:pb-12 relative z-10">
 
-        {/* Ambient subtle glow in background (static) */}
-        <div className="absolute top-0 right-1/4 w-72 sm:w-[500px] h-72 sm:h-[500px] bg-[#b31c26]/25 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-64 sm:w-[400px] h-64 sm:h-[400px] bg-[#780d15]/20 rounded-full blur-[100px] pointer-events-none" />
+        {/* Ambient subtle glow */}
+        <div className="absolute top-0 right-1/4 w-72 sm:w-[500px] h-72 sm:h-[500px] bg-red-400/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-64 sm:w-[400px] h-64 sm:h-[400px] bg-black/20 rounded-full blur-[90px] pointer-events-none" />
 
         <div className="container mx-auto px-3.5 sm:px-6" style={{ maxWidth: '1380px' }}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-start">
@@ -133,8 +134,8 @@ const Hero = ({ setIsOpen }) => {
                       }}
                       className={`py-2 px-1 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer text-center border truncate ${
                         isActive
-                          ? 'bg-[#b31c26] text-white border-[#b31c26] shadow-md'
-                          : 'bg-white/10 text-white/75 border-transparent hover:bg-white/20 hover:text-white'
+                          ? 'bg-white text-[#800008] border-white shadow-lg font-bold'
+                          : 'bg-black/35 text-white/85 border-white/15 hover:bg-black/50 hover:text-white'
                       }`}
                     >
                       <span className="sm:hidden">{slide.shortName || slide.name}</span>
@@ -145,13 +146,15 @@ const Hero = ({ setIsOpen }) => {
               </div>
 
               {/* Project RERA Number Box */}
-              <div className="mt-4">
-                <div className="inline-flex items-center bg-white/[0.06] border border-white/15 rounded-lg py-2.5 px-4 shadow-sm text-xs sm:text-[13.5px] backdrop-blur-sm transition-all hover:border-white/30">
-                  <i className="fas fa-shield-halved text-emerald-400 mr-2 text-[13px]" />
-                  <span className="text-white/70 mr-1.5 font-medium">
-                    RERA No :
-                  </span>
-                  <span className="text-white font-bold tracking-wider">
+              <div className="mt-4 flex">
+                <div className="inline-flex flex-wrap items-center max-w-full bg-black/30 border border-white/25 rounded-lg py-2 px-3 sm:px-4 shadow-sm text-[11px] sm:text-[13px] backdrop-blur-sm transition-all hover:border-white/40">
+                  <div className="flex items-center shrink-0 mr-1.5">
+                    <i className="fas fa-shield-halved text-emerald-400 mr-1.5 text-[12px] sm:text-[13px]" />
+                    <span className="text-white/80 font-medium">
+                      RERA No :
+                    </span>
+                  </div>
+                  <span className="text-white font-bold tracking-normal sm:tracking-wider break-all">
                     {RERA_NO}
                   </span>
                 </div>
@@ -165,37 +168,37 @@ const Hero = ({ setIsOpen }) => {
             <div className="lg:col-span-5 mt-2 lg:mt-0 flex flex-col">
 
               {/* Key Quick Specs Strip (Moved above the form) */}
-              <div className="flex flex-row flex-wrap items-center justify-between gap-x-2 gap-y-3 sm:gap-4 lg:gap-5 p-2.5 sm:p-4 mb-5 rounded-2xl bg-white/5 border border-white/30 text-xs sm:text-sm shadow-lg w-full">
+              <div className="flex flex-row flex-wrap items-center justify-between gap-x-2 gap-y-3 sm:gap-4 lg:gap-5 p-2.5 sm:p-4 mb-5 rounded-2xl bg-black/40 backdrop-blur-md border border-white/35 text-xs sm:text-sm shadow-xl w-full">
                 <div className="flex-shrink-0">
-                  <span className="text-white/60 text-[9.5px] sm:text-[10.5px] uppercase block mb-0.5">Price</span>
+                  <span className="text-white/90 font-bold text-[10px] sm:text-[11px] uppercase tracking-wider block mb-0.5">Price</span>
                   <div className="flex items-center gap-1.5">
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ff4d5a] opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ff4d5a]"></span>
                     </span>
-                    <strong className="blink-price font-black text-[14.5px] sm:text-[19px] whitespace-nowrap tracking-tight">
+                    <strong className="blink-price font-black text-[14.5px] sm:text-[19px] whitespace-nowrap tracking-tight text-white">
                       ₹ 1.84 Cr* Onwards
                     </strong>
                   </div>
                 </div>
-                <div className="border-l border-white/20 pl-2 sm:pl-4 lg:pl-5 flex-shrink-0">
-                  <span className="text-white/60 text-[9.5px] sm:text-[10.5px] uppercase block mb-0.5">Typology</span>
-                  <strong className="text-white font-bold text-[12px] sm:text-[14px] whitespace-nowrap">3 &amp; 4 BHK</strong>
+                <div className="border-l border-white/35 pl-2 sm:pl-4 lg:pl-5 flex-shrink-0">
+                  <span className="text-white/90 font-bold text-[10px] sm:text-[11px] uppercase tracking-wider block mb-0.5">Typology</span>
+                  <strong className="text-white font-black text-[13px] sm:text-[15px] whitespace-nowrap">3 &amp; 4 BHK</strong>
                 </div>
-                <div className="border-l border-white/20 pl-2 sm:pl-4 lg:pl-5 flex-shrink-0">
-                  <span className="text-white/60 text-[9.5px] sm:text-[10.5px] uppercase block mb-0.5">Status</span>
-                  <strong className="text-emerald-400 font-bold text-[12px] sm:text-[14px] whitespace-nowrap">New Launch</strong>
+                <div className="border-l border-white/35 pl-2 sm:pl-4 lg:pl-5 flex-shrink-0">
+                  <span className="text-white/90 font-bold text-[10px] sm:text-[11px] uppercase tracking-wider block mb-0.5">Status</span>
+                  <strong className="text-emerald-300 font-black text-[13px] sm:text-[15px] whitespace-nowrap">New Launch</strong>
                 </div>
               </div>
 
               <div
                 className="rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 relative overflow-hidden"
                 style={{
-                  background: 'rgba(24, 6, 8, 0.92)',
+                  background: 'rgba(8, 8, 10, 0.96)',
                   backdropFilter: 'blur(28px)',
                   WebkitBackdropFilter: 'blur(28px)',
-                  border: '1px solid rgba(255, 255, 255, 0.16)',
-                  boxShadow: '0 20px 60px rgba(0, 0, 0, 0.65)',
+                  border: '1px solid rgba(255, 255, 255, 0.14)',
+                  boxShadow: '0 20px 60px rgba(0, 0, 0, 0.7)',
                   borderTop: '4px solid #b31c26',
                 }}
               >
@@ -210,7 +213,7 @@ const Hero = ({ setIsOpen }) => {
                 </div>
 
                 {/* LeadForm */}
-                <LeadForm formName="Arvind Sylva Form" btnText="Get Cost Sheet on WhatsApp" />
+                <LeadForm formName="Arvind Sylva Form" btnText="Get Details" />
 
                 {/* Instant Actions (Call & Visit on Mobile) */}
                 <div className="mt-3.5 pt-3.5 border-t border-white/10 flex items-center justify-between text-[11.5px] sm:text-xs text-white/80">
