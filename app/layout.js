@@ -53,6 +53,11 @@ export const metadata = {
     siteName: 'Arvind Sylva',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Arvind Sylva | Premium 3 & 4 BHK Apartments Bengaluru',
+    description: 'Arvind Sylva is a premium residential project by Arvind SmartSpaces located opposite Wipro Office at Kodathi Gate on Sarjapur Road, Bangalore.',
+  },
   icons: {
     icon: '/favicon/favicon.png',
     shortcut: '/favicon/favicon.ico',
