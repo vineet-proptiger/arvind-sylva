@@ -30,7 +30,7 @@ const Overview = ({ setIsOpen }) => {
           {/* Content Column */}
           <div className="w-full lg:w-1/2 lg:px-[12px] lg:pl-16">
             <div className="section-heading">
-              <span className="text-[#b31c26] font-bold text-[14px] tracking-widest uppercase mb-3 block">
+              <span className="text-[#C05656] font-bold text-[14px] tracking-widest uppercase mb-3 block">
                 Wellness Architecture
               </span>
               <h2 className="text-[#111111] text-[25px] sm:text-[30px] md:text-[38px] font-extrabold leading-[1.2] mb-4">
@@ -48,7 +48,7 @@ const Overview = ({ setIsOpen }) => {
                 <button
                   type="button"
                   onClick={() => setIsExpanded(!isExpanded)}
-                  className="text-[#b31c26] font-semibold text-[14.5px] mt-2 hover:underline inline-flex items-center gap-1 cursor-pointer transition-colors duration-200 focus:outline-none"
+                  className="text-[#C05656] font-semibold text-[14.5px] mt-2 hover:underline inline-flex items-center gap-1 cursor-pointer transition-colors duration-200 focus:outline-none"
                 >
                   {isExpanded ? 'Read Less' : 'Read More'}
                   <svg 
@@ -65,7 +65,7 @@ const Overview = ({ setIsOpen }) => {
               <div className="grid grid-cols-2 gap-4 sm:gap-6 mt-6 mb-8">
                 {/* Feature 1 */}
                 <div className="flex items-start gap-2 sm:gap-3">
-                  <div className="mt-0.5 flex-shrink-0 text-[#b31c26]">
+                  <div className="mt-0.5 flex-shrink-0 text-[#C05656]">
                     <i className="fa-solid fa-circle-check text-[18px] sm:text-[22px]"></i>
                   </div>
                   <div>
@@ -75,7 +75,7 @@ const Overview = ({ setIsOpen }) => {
                 </div>
                 {/* Feature 2 */}
                 <div className="flex items-start gap-2 sm:gap-3">
-                  <div className="mt-0.5 flex-shrink-0 text-[#b31c26]">
+                  <div className="mt-0.5 flex-shrink-0 text-[#C05656]">
                     <i className="fa-solid fa-circle-check text-[18px] sm:text-[22px]"></i>
                   </div>
                   <div>
@@ -85,7 +85,7 @@ const Overview = ({ setIsOpen }) => {
                 </div>
                 {/* Feature 3 */}
                 <div className="flex items-start gap-2 sm:gap-3">
-                  <div className="mt-0.5 flex-shrink-0 text-[#b31c26]">
+                  <div className="mt-0.5 flex-shrink-0 text-[#C05656]">
                     <i className="fa-solid fa-circle-check text-[18px] sm:text-[22px]"></i>
                   </div>
                   <div>
@@ -95,7 +95,7 @@ const Overview = ({ setIsOpen }) => {
                 </div>
                 {/* Feature 4 */}
                 <div className="flex items-start gap-2 sm:gap-3">
-                  <div className="mt-0.5 flex-shrink-0 text-[#b31c26]">
+                  <div className="mt-0.5 flex-shrink-0 text-[#C05656]">
                     <i className="fa-solid fa-circle-check text-[18px] sm:text-[22px]"></i>
                   </div>
                   <div>

@@ -18,13 +18,13 @@ const Footer = () => (
       {/* ── Subheading / Tagline ── */}
       <p 
         data-aos="fade-up" data-aos-delay="50"
-        className="text-[#b31c26] font-semibold text-[12px] sm:text-[13.5px] tracking-[2px] uppercase m-0"
+        className="text-[#C05656] font-semibold text-[12px] sm:text-[13.5px] tracking-[2px] uppercase m-0"
       >
         LANDMARK LUXURY RESIDENTIAL DEVELOPMENT — KODATHI GATE, SARJAPUR, BENGALURU
       </p>
 
       {/* ── Accent Underline ── */}
-      <div className="w-12 h-[2.5px] bg-[#b31c26] my-6 rounded-full" />
+      <div className="w-12 h-[2.5px] bg-[#C05656] my-6 rounded-full" />
 
       {/* ── Developer Description ── */}
       <p 
@@ -54,7 +54,7 @@ const Footer = () => (
       <div className="w-full flex justify-end text-[13.5px] sm:text-[14px] mb-4">
         <Link
           href="/privacy-policy"
-          className="text-[#b31c26] hover:underline font-medium transition-colors duration-200"
+          className="text-[#C05656] hover:underline font-medium transition-colors duration-200"
         >
           Privacy Policy
         </Link>
@@ -62,7 +62,7 @@ const Footer = () => (
 
       {/* ── Detailed Legal Disclaimer ── */}
       <p className="w-full text-left text-neutral-500 text-[12px] leading-[1.75] m-0">
-        <strong className="text-[#b31c26]">Disclaimer:</strong> This is not the official website of the developer. The information depicted herein, including master plans, floor plans, furniture layout, fittings, illustrations, specifications, designs, dimensions, rendered views, colours, amenities and facilities etc., are subject to change without notification as may be required by the relevant authorities or the Developer&apos;s architect. This advertisement is an invitation to offer and shall not be construed as an offer or contract. * Prices subject to change without notice. All taxes extra as applicable.
+        <strong className="text-[#C05656]">Disclaimer:</strong> This is not the official website of the developer. The information depicted herein, including master plans, floor plans, furniture layout, fittings, illustrations, specifications, designs, dimensions, rendered views, colours, amenities and facilities etc., are subject to change without notification as may be required by the relevant authorities or the Developer&apos;s architect. This advertisement is an invitation to offer and shall not be construed as an offer or contract. * Prices subject to change without notice. All taxes extra as applicable.
       </p>
 
     </div>

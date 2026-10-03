@@ -21,7 +21,7 @@ const Pricing = ({ setIsOpen }) => {
         
         {/* Section Header */}
         <div className="text-center max-w-5xl mx-auto mb-12" data-aos="fade-up">
-          <span className="text-[#b31c26] font-bold text-[13px] sm:text-[14px] tracking-[2px] uppercase mb-2.5 block">
+          <span className="text-[#C05656] font-bold text-[13px] sm:text-[14px] tracking-[2px] uppercase mb-2.5 block">
             PRICE LIST
           </span>
           <h2 className="text-[#111111] text-[26px] sm:text-[32px] md:text-[38px] font-extrabold m-0 leading-tight md:whitespace-nowrap">
@@ -36,8 +36,8 @@ const Pricing = ({ setIsOpen }) => {
               key={index}
               data-aos="fade-up"
               data-aos-delay={(index * 100).toString()}
-              className="bg-white rounded-[20px] p-6 sm:p-7 border border-[#fbe6e7] shadow-[0_8px_30px_rgba(179, 28, 38,0.06)] relative overflow-hidden flex flex-col justify-between"
-              style={{ borderTop: '4px solid #b31c26' }}
+              className="bg-white rounded-[20px] p-6 sm:p-7 border border-[#f9ecec] shadow-[0_8px_30px_rgba(192, 86, 86,0.06)] relative overflow-hidden flex flex-col justify-between"
+              style={{ borderTop: '4px solid #C05656' }}
             >
               <div>
                 {/* Top Header: Unit Type & Area Tag */}
@@ -45,7 +45,7 @@ const Pricing = ({ setIsOpen }) => {
                   <h3 className="text-[#1a1a1a] font-black text-[20px] sm:text-[22px] m-0">
                     {item.type}
                   </h3>
-                  <span className="bg-[#fbe6e7] text-[#b31c26] text-[12.5px] sm:text-[13.5px] font-extrabold px-3.5 py-1.5 rounded-full shadow-sm whitespace-nowrap">
+                  <span className="bg-[#f9ecec] text-[#C05656] text-[12.5px] sm:text-[13.5px] font-extrabold px-3.5 py-1.5 rounded-full shadow-sm whitespace-nowrap">
                     {item.area}
                   </span>
                 </div>
@@ -63,18 +63,18 @@ const Pricing = ({ setIsOpen }) => {
 
               <button
                 onClick={() => setIsOpen(true)}
-                className="w-full py-3.5 rounded-[50px] font-bold text-[15px] transition-all duration-300 shadow-[0_6px_20px_rgba(179, 28, 38,0.35)] active:scale-[0.98] cursor-pointer"
+                className="w-full py-3.5 rounded-[50px] font-bold text-[15px] transition-all duration-300 shadow-[0_6px_20px_rgba(192, 86, 86,0.35)] active:scale-[0.98] cursor-pointer"
                 style={{
-                  background: '#b31c26',
+                  background: '#C05656',
                   color: '#ffffff',
-                  border: '2px solid #b31c26',
+                  border: '2px solid #C05656',
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.background = '#ffffff';
-                  e.currentTarget.style.color = '#b31c26';
+                  e.currentTarget.style.color = '#C05656';
                 }}
                 onMouseLeave={e => {
-                  e.currentTarget.style.background = '#b31c26';
+                  e.currentTarget.style.background = '#C05656';
                   e.currentTarget.style.color = '#ffffff';
                 }}
               >
@@ -104,23 +104,23 @@ const Pricing = ({ setIsOpen }) => {
                   <td className="py-6 px-6">
                     <button 
                       onClick={() => setIsOpen(true)}
-                      className="inline-flex items-center justify-center px-8 py-3 rounded-[50px] font-bold text-[14px] transition-all duration-300 shadow-[0_4px_16px_rgba(179, 28, 38,0.35)] cursor-pointer"
+                      className="inline-flex items-center justify-center px-8 py-3 rounded-[50px] font-bold text-[14px] transition-all duration-300 shadow-[0_4px_16px_rgba(192, 86, 86,0.35)] cursor-pointer"
                       style={{
-                        background: '#b31c26',
+                        background: '#C05656',
                         color: '#ffffff',
-                        border: '2px solid #b31c26',
+                        border: '2px solid #C05656',
                       }}
                       onMouseEnter={e => {
                         e.currentTarget.style.background = '#ffffff';
-                        e.currentTarget.style.color = '#b31c26';
+                        e.currentTarget.style.color = '#C05656';
                         e.currentTarget.style.transform = 'translateY(-2px)';
-                        e.currentTarget.style.boxShadow = '0 8px 24px rgba(179, 28, 38,0.45)';
+                        e.currentTarget.style.boxShadow = '0 8px 24px rgba(192, 86, 86,0.45)';
                       }}
                       onMouseLeave={e => {
-                        e.currentTarget.style.background = '#b31c26';
+                        e.currentTarget.style.background = '#C05656';
                         e.currentTarget.style.color = '#ffffff';
                         e.currentTarget.style.transform = 'none';
-                        e.currentTarget.style.boxShadow = '0 4px 16px rgba(179, 28, 38,0.35)';
+                        e.currentTarget.style.boxShadow = '0 4px 16px rgba(192, 86, 86,0.35)';
                       }}
                     >
                       Get Price List

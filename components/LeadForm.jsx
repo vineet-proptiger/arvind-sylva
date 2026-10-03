@@ -60,7 +60,7 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Now' }) => {
         </svg>
       </div>
       <h4 className="text-xl font-bold text-[#ffffff] mb-2">Thank You!</h4>
-      <p className="text-[#fbe6e7] text-sm font-medium">Our team will contact you shortly.</p>
+      <p className="text-[#f9ecec] text-sm font-medium">Our team will contact you shortly.</p>
     </div>
   )
 
@@ -111,7 +111,7 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Now' }) => {
           required
           defaultChecked
           className="mt-1 shrink-0 cursor-pointer"
-          style={{ accentColor: '#b31c26', width: '16px', height: '16px' }}
+          style={{ accentColor: '#C05656', width: '16px', height: '16px' }}
         />
         <label
           htmlFor="consentCheck"
