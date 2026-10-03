@@ -56,11 +56,11 @@ export async function POST(request) {
     }
 
     /* ── User data ── */
-    const fullName = get('fullname')
+    const fullName = get('fullname') || get('name') || get('FullName')
     const projectName = get('projectName')
-    const nameParts = fullName.trim().split(/\s+/)
+    const nameParts = fullName.trim() ? fullName.trim().split(/\s+/) : []
     const firstName = nameParts[0] || ''
-    const lastName = nameParts[1] || firstName
+    const lastName = nameParts.slice(1).join(' ') || ''
 
     /* ── Tracking ── */
     const utmSource = get('utm_source') || 'Microsite'
@@ -78,6 +78,32 @@ export async function POST(request) {
     const userIP = getUserIP(request) || get('ip_address')
 
     const comments = get('comments')
+
+    // Advanced Google & UTM tracking parameters
+    const newTrackingParams = {
+      google_campaign_id: get('google_campaign_id'),
+      google_ad_group_id: get('google_ad_group_id'),
+      google_ad_group_name: get('google_ad_group_name'),
+      google_ad_id: get('google_ad_id'),
+      google_wbraid: get('google_wbraid'),
+      google_gbraid: get('google_gbraid'),
+      google_keyword: get('google_keyword'),
+      google_matchtype: get('google_matchtype'),
+      google_network: get('google_network'),
+      google_device: get('google_device'),
+      google_gclid: get('google_gclid'),
+      utm_campaign_id: get('utm_campaign_id'),
+      utm_adgroup: get('utm_adgroup'),
+      utm_adgroup_id: get('utm_adgroup_id'),
+      utm_ad_id: get('utm_ad_id'),
+      utm_keyword: get('utm_keyword'),
+      utm_matchtype: get('utm_matchtype'),
+      utm_network: get('utm_network'),
+      utm_device: get('utm_device'),
+      utm_gclid: get('utm_gclid'),
+      utm_gbraid: get('utm_gbraid'),
+      utm_wbraid: get('utm_wbraid'),
+    }
 
     /* ── 1. Google Sheet ── */
     const sheetPayload = new URLSearchParams({
@@ -123,7 +149,14 @@ export async function POST(request) {
       .catch(e => console.error('[Sheet] error:', e.message))
 
     /* ── 2. Proptiger CRM ── */
-    const ptUrl = `${PROPTIGER_URL}?utm_source=${encodeURIComponent(utmSource)}&utm_medium=${encodeURIComponent(utmMedium)}&utm_campaign=${encodeURIComponent(utmCampaign)}&utm_term=${encodeURIComponent(utmTerm)}&utm_content=${encodeURIComponent(utmContent)}&gclid=${encodeURIComponent(gclid)}&gbraid=${encodeURIComponent(gbraid)}&wbraid=${encodeURIComponent(wbraid)}&campaign_name=${encodeURIComponent(campaignName)}&sourceDomain=Microsite`
+    let ptUrl = `${PROPTIGER_URL}?utm_source=${encodeURIComponent(utmSource)}&utm_medium=${encodeURIComponent(utmMedium)}&utm_campaign=${encodeURIComponent(utmCampaign)}&utm_term=${encodeURIComponent(utmTerm)}&utm_content=${encodeURIComponent(utmContent)}&gclid=${encodeURIComponent(gclid)}&gbraid=${encodeURIComponent(gbraid)}&wbraid=${encodeURIComponent(wbraid)}&campaign_name=${encodeURIComponent(campaignName)}&sourceDomain=Microsite`
+
+    // Append new tracking parameters to CRM URL
+    Object.entries(newTrackingParams).forEach(([key, value]) => {
+      if (value) {
+        ptUrl += `&${key}=${encodeURIComponent(value)}`
+      }
+    })
 
     const ptPayload = {
       name: `${firstName} ${lastName}`.trim(),
