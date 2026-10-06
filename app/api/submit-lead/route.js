@@ -19,7 +19,7 @@ function getUserIP(request) {
     const ip = forwarded.split(',')[0].trim()
     if (ip && !loopback.has(ip)) return ip
   }
-  const realIp = request.headers.get('x-real-ip')
+  const realIp = request.headers.get('x-real-ip') 
   if (realIp && !loopback.has(realIp)) return realIp
   return ''
 }
